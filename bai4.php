@@ -11,7 +11,7 @@
         th, td {
             padding: 8px;
             text-align: center;
-        }
+        }  
     </style>
 </head>
 <body>
