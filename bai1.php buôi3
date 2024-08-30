@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1</title>
+</head>
+<body>
+    <form action="kqbai1.php"method="post">
+       Tên sách<input type = "text" name  = "tensach"><br> 
+       Tác giả <input type = "text" name= "tg"><br> 
+       Nhà xuất bản <input type = "text" name = "nxb"><br> 
+       Năm xuất bản<input type = "text" name = "nam"><br> 
+       <input type="submit">
+    </form>
+   
+</body>
+</html>
