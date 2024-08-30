@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+</head>
+<body>
+<form action="bai2kq.php" method="post">
+        <label>Name</label><br>
+        <input type="text" name="firstname" placeholder="First Name">
+        <input type="text" name="lastname" placeholder="Last Name"><br><br>
+
+        <label>Email</label><br>
+        <input type="email" name="email" placeholder="example@gmail.com"><br><br>
+
+        <label>Invoice ID</label><br>
+        <input type="text" name="invoice_id"><br><br>
+
+        <label>Pay For</label><br>
+        <input type="checkbox" name="payfor[]" value="1"> 15k Category
+        <input type="checkbox" name="payfor[]" value="8"> 35k category<br>
+        <input type="checkbox" name="payfor[]" value="2"> 55k category
+        <input type="checkbox" name="payfor[]" value="9"> 75k category<br>
+        <input type="checkbox" name="payfor[]" value="3"> 116k category
+        <input type="checkbox" name="payfor[]" value="20"> 20<br>
+        <input type="checkbox" name="payfor[]" value="4"> Shuttle Two wáys
+        <input type="checkbox" name="payfor[]" value="22"> 22<br>
+        <input type="checkbox" name="payfor[]" value="5"> Compressport<br>
+        <input type="checkbox" name="payfor[]" value="6"> other<br>
+
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>
