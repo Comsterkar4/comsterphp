@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $errors = [];
+    
+    if (empty($_POST["firstname"])) {
+        $errors[] = "First Name is required.";
+    }
+    
+    if (empty($_POST["lastname"])) {
+        $errors[] = "Last Name is required.";
+    }
+    
+    if (empty($_POST["email"]) || !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Valid Email is required.";
+    }
+    
+    if (empty($_POST["invoice_id"]) || !is_numeric($_POST["invoice_id"])) {
+        $errors[] = "Valid Invoice ID is required.";
+    }
+    
+    if (empty($_POST["payfor"])) {
+        $errors[] = "At least one Pay For option must be selected.";
+    }
+
+    if (empty($errors)) {
+        // Dữ liệu hợp lệ
+        echo "First Name: " . htmlspecialchars($_POST["firstname"]) . "<br>";
+        echo "Last Name: " . htmlspecialchars($_POST["lastname"]) . "<br>";
+        echo "Email: " . htmlspecialchars($_POST["email"]) . "<br>";
+        echo "Invoice ID: " . htmlspecialchars($_POST["invoice_id"]) . "<br>";
+        echo "Pay For: " . implode(", ", $_POST["payfor"]) . "<br>";
+    } else {
+        // Hiển thị lỗi
+        foreach ($errors as $error) {
+            echo "<p style='color:red;'>$error</p>";
+        }
+    }
+}
+?>
+
+</body>
+</html>
